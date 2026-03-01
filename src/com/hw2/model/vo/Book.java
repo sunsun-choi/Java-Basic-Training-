@@ -6,15 +6,15 @@ public class Book {//클래스 영역시작
 	//필드명
 	private String title;
 	private int price;
-	private double discontRate;
+	private double discountRate;
 	private String author;
 	
 	//생성자명
 	public Book() {}
-	public Book(String title, int price, double discontRate, String author) {
+	public Book(String title, int price, double discountRate, String author) {
 		this.title = title;
 		this.price = price;
-		this.discontRate = discontRate;
+		this.discountRate = discountRate;
 		this.author = author;
 	}
 	
@@ -32,11 +32,11 @@ public class Book {//클래스 영역시작
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	public double getDiscontRate() {
-		return discontRate;
+	public double getDiscountRate() {
+		return discountRate;
 	}
-	public void setDiscontRate(double discontRate) {
-		this.discontRate = discontRate;
+	public void setDiscountRate(double discountRate) {
+		this.discountRate = discountRate;
 	}
 	public String getAuthor() {
 		return author;
@@ -47,7 +47,7 @@ public class Book {//클래스 영역시작
 	
 	//information
 	public String information() {
-		return title + "   " + price  + "   " + discontRate  + "   " + author;
+		return title + "   " + price  + "   " + discountRate  + "   " + author;
 	}
 	
 	//discount
@@ -56,7 +56,7 @@ public class Book {//클래스 영역시작
 	//**계산은 메소드부에서! 
 	
 	public void showDiscountTag() {
-		int discountPrice = (int)(price * (1 - discontRate));
+		int discountPrice = (int)(price * (1 - discountRate));
 		System.out.println("도서명 = " + title);
 		System.out.println("할인된 가격 = " + discountPrice);
 	}
